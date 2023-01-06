@@ -1,6 +1,6 @@
 class Employee
 {
-	private int eId=101;
+	private int eId;
 	public void setId(int id){
 	     this.eId=id;
 	}
