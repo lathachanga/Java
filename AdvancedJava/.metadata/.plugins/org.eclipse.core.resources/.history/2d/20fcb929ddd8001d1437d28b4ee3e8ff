@@ -1,0 +1,12 @@
+package com.mongo.document;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+@Document
+public class Books {
+	@Id
+	 private String id;
+	 private Integer booksId;
+	 private String booksName;
+	 private double booksCost;
+}

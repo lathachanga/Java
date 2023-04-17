@@ -1,0 +1,12 @@
+package com.mongo.runner;
+
+import org.springframework.boot.CommandLineRunner;
+
+public class Myrunner implements CommandLineRunner {
+
+	@Override
+	public void run(String... args) throws Exception {
+		
+	}
+
+}

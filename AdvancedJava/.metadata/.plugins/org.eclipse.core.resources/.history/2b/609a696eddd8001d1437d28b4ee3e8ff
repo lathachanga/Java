@@ -1,0 +1,25 @@
+package com.mongo.runner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.CommandLineRunner;
+
+import com.mongo.document.Books;
+import com.mongo.repository.BooksRepository;
+
+public class MyRunner implements CommandLineRunner {
+	
+	@Autowired 
+	BooksRepository br;
+
+	@Override
+	public void run(String... args) throws Exception {
+
+		br.save(new Books(101,"Srilatha",30000));
+		br.save(new Books(102,"Bujji",30000));
+		br.save(new Books(103,"Pavan",30000));
+		
+		System.out.println("getting data");
+		br.findAll().forEach(x->System.out.println(x));
+	}
+
+}
